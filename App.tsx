@@ -13,6 +13,7 @@ import * as LocalAuth from "expo-local-authentication";
 import { setLocked } from "./src/store/lock.slice";
 import { delMMKV, getMMKV, setMMKV } from "./src/store/mmkv";
 import { signedIn, signedOut } from "./src/store/session.slice";
+import Toast from "./src/ui/Toast";
 
 import LoginScreen from "./src/screens/LoginScreen";
 import AllProductsScreen from "./src/screens/AllProductsScreen";
@@ -62,7 +63,7 @@ function Boot(){
     return ()=>sub.remove();
   },[]);
 
-  // Idle lock (10s)
+  // Idle lock (10s) – works for web/dev; background lock covers native
   useEffect(()=>{
     const reset = ()=>{
       if (timerId.current) clearTimeout(timerId.current);
@@ -89,7 +90,6 @@ function Boot(){
         const res = await LocalAuth.authenticateAsync({ promptMessage:"Unlock" });
         if (res.success) dispatch(setLocked(false));
       }
-      // Else: user may use password fallback on LockOverlay
     }
     if (locked) auth();
   },[locked]);
@@ -121,6 +121,8 @@ export default function App(){
         <NavigationContainer theme={DefaultTheme}>
           <Boot/>
           <RootNav/>
+          {/* 👇 NEW: toast UI host */}
+          <Toast />
         </NavigationContainer>
       </QueryClientProvider>
     </Provider>
