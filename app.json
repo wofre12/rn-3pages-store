@@ -1,36 +1,4 @@
 {
-  "expo": {
-    "name": "rn-3pages-store",
-    "slug": "rn-3pages-store",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false,
-      "package": "com.gehad_hassan.rn3pagesstore"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "314b617a-ef03-4061-aa2e-278815682444"
-      }
-    }
-  }
+  "name": "rn-3pages-store",
+  "displayName": "rn-3pages-store"
 }

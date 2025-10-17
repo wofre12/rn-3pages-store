@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "module": "esnext",
-    "target": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
     "jsx": "react-native",
-    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "allowJs": true,
+    "checkJs": false,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "noEmit": true,
-    "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["react", "react-native"]
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "types": ["react", "react-native", "node"]
   },
-  "include": ["src", "App.tsx"]
+  "include": ["src", "App.tsx", "index.js"],
+  "exclude": ["node_modules"]
 }
