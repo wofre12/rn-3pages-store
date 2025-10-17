@@ -1,15 +1,16 @@
 {
   "name": "rn-3pages-store",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web"
+    "start": "react-native start",
+    "android": "npx react-native run-android",
+    "ios": "npx react-native run-ios",
+    "clean": "cd android && gradlew clean && cd .."
   },
   "dependencies": {
     "@react-native-community/netinfo": "11.4.1",
+    "@react-native/monorepo": "https://github.com/facebook/react-native/archive/refs/tags/v0.76.3.tar.gz",
     "@react-navigation/bottom-tabs": "^7.4.9",
     "@react-navigation/native": "^7.1.18",
     "@react-navigation/native-stack": "^7.3.28",
@@ -18,19 +19,17 @@
     "@tanstack/react-query": "^5.90.3",
     "@tanstack/react-query-persist-client": "^5.90.5",
     "axios": "^1.12.2",
-    "expo": "~54.0.13",
-    "expo-local-authentication": "~17.0.7",
-    "expo-status-bar": "~3.0.8",
-    "react": "19.1.0",
-    "react-native": "0.81.4",
-    "react-native-gesture-handler": "~2.28.0",
-    "react-native-mmkv": "^3.0.0-beta.5",
+    "react": "^18.2.0",
+    "react-native": "^0.76.3",
+    "react-native-gesture-handler": "^2.14.0",
+    "react-native-mmkv": "^2.10.2",
     "react-native-safe-area-context": "~5.6.0",
     "react-native-screens": "~4.16.0",
     "react-native-toast-message": "^2.3.3",
     "react-redux": "^9.2.0"
   },
   "devDependencies": {
+    "@react-native-community/cli": "^20.0.2",
     "@types/react": "~19.1.0",
     "@types/react-native": "^0.72.8",
     "typescript": "~5.9.2"
