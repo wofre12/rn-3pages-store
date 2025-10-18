@@ -9,6 +9,9 @@ import { queryClient } from "./src/query/client";
 import { enablePersistence } from "./src/query/persist";
 import { useEffect, useRef } from "react";
 import { AppState, AppStateStatus } from "react-native";
+import "react-native-gesture-handler";
+// add this import:
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import ReactNativeBiometrics from "react-native-biometrics";
 
 import { setLocked } from "./src/store/lock.slice";
@@ -150,17 +153,18 @@ function RootNav() {
     </>
   );
 }
-
 export default function App() {
   return (
-    <Provider store={store}>
-      <QueryClientProvider client={queryClient}>
-        <NavigationContainer theme={DefaultTheme}>
-          <Boot />
-          <RootNav />
-          <Toast />
-        </NavigationContainer>
-      </QueryClientProvider>
-    </Provider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Provider store={store}>
+        <QueryClientProvider client={queryClient}>
+          <NavigationContainer theme={DefaultTheme}>
+            <Boot />
+            <RootNav />
+            <Toast />
+          </NavigationContainer>
+        </QueryClientProvider>
+      </Provider>
+    </GestureHandlerRootView>
   );
 }
