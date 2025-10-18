@@ -29,8 +29,8 @@
     "react-redux": "^9.2.0"
   },
   "devDependencies": {
-    "@react-native-community/cli": "^20.0.2",
-    "@react-native-community/cli-platform-android": "^20.0.2",
+    "@react-native-community/cli": "^13.6.9",
+    "@react-native-community/cli-platform-android": "^13.6.9",
     "@react-native/metro-config": "^0.82.0",
     "@types/node": "^24.8.1",
     "@types/react": "^18.3.26",
